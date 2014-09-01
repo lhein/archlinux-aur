@@ -1,6 +1,6 @@
 # Maintainer: Wijnand Modderman-Lenstra <maze@maze.io>
 pkgname=bluejeans
-pkgver=2.6.255.8
+pkgver=2.7.176.8
 pkgrel=1
 pkgdesc="BlueJeans browser plugin"
 arch=('x86_64')
@@ -11,12 +11,13 @@ conflicts=(bjnplugin)
 depends=()
 makedepends=(dpkg)
 source=(
-    https://swdl.bluejeans.com/skinny/bjnplugin_${pkgver}-1_amd64.deb
+    https://swdl.bluejeans.com/skinny/rbjnplugin_${pkgver}-1_amd64.deb
 )
-md5sums=('63c01cb8865abbc9a4e8b24310f5c31a')
-sha1sums=('ad6c253f6d9e5331454902abcf760dd68dcadf33')
+md5sums=('c3fb8b74867578bbc6c689e71a181cb2')
+sha1sums=('94ceddf6e3e6d062ce0c43dca5421f6b607eac8c')
 backup=('usr/lib/mozilla/plugins/.bjnplugin/config/config.xml')
 
 package() {
-    dpkg -x bjnplugin_${pkgver}-${pkgrel}_amd64.deb "${pkgdir}"
+    dpkg -x rbjnplugin_${pkgver}-${pkgrel}_amd64.deb "${pkgdir}"
 }
+
